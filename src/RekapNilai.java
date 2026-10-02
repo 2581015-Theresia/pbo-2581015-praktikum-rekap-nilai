@@ -44,6 +44,18 @@ public class RekapNilai {
                 grade = 'E';
             }
 
+            String keterangan = switch (grade) {
+                case 'A' -> "Sangat Baik";
+                case 'B' -> "Baik";
+                case 'C' -> "Cukup";
+                case 'D' -> "Kurang";
+                default -> "Tidak Lulus";
+            };
+
+            System.out.println("  Grade " + grade + " — " + keterangan);
+
+            nomor++;
+
+        } while (nilai != SELESAI);
         }
         }
-}
